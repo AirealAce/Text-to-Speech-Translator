@@ -1,0 +1,10 @@
+[build]
+command = "next build"
+output = ".next"
+
+[build.environment]
+NODE_VERSION = "22.16.0"
+NEXT_TELEMETRY_DISABLED = "1"
+
+[site]
+bucket = ".next" 
