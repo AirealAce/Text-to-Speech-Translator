@@ -5,11 +5,15 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "pages:build": "npx @cloudflare/next-on-pages",
+    "pages:deploy": "npx @cloudflare/next-on-pages --deploy",
+    "pages:watch": "npx @cloudflare/next-on-pages --watch",
     "start": "next start",
     "lint": "next lint"
   },
   "dependencies": {
     "@anthropic-ai/sdk": "^0.18.0",
+    "@cloudflare/next-on-pages": "^1.13.12",
     "@deepgram/sdk": "^4.2.0",
     "ai": "^3.0.0",
     "date-fns": "^3.6.0",
