@@ -3,6 +3,8 @@ import fs from "fs";
 import path from "path";
 import OpenAI from "openai";
 
+export const runtime = 'edge';
+
 const openai = new OpenAI();
 
 export async function POST(req: Request) {
