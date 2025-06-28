@@ -24,6 +24,13 @@ const nextConfig = {
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
+  webpack: (config, { dev, isServer }) => {
+    // Disable webpack caching for production builds to avoid Cloudflare 25MB limit
+    if (!dev) {
+      config.cache = false;
+    }
+    return config;
+  },
   async rewrites() {
     return [
       {
